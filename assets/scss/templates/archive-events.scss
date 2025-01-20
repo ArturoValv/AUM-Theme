@@ -1,0 +1,117 @@
+@import "../breakpoints";
+
+.post-type-archive-tribe_events {
+	.tribe-events-c-search {
+		border: 2px solid rgba(var(--primary-color), 1);
+		transition: 0.2s ease;
+
+		&:has(.tribe-events-c-search__button:hover),
+		&:focus-within {
+			border-color: rgba(var(--secondary-color), 1);
+		}
+
+		&__button {
+			height: 100%;
+			font-size: 2rem;
+			color: #fff;
+			background-color: rgba(var(--primary-color), 1);
+			transition: 0.2s ease;
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: rgba(var(--secondary-color), 1);
+			}
+		}
+	}
+
+	.tribe-events-calendar-list {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&__month-separator {
+			text-transform: capitalize;
+		}
+
+		&__event-row {
+			width: 100%;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+			padding-bottom: 30px;
+			border-bottom: 2px solid rgba(var(--primary-color), 0.6);
+		}
+
+		&__event-datetime {
+			font-family: var(--lato);
+			font-size: 1.8rem;
+			line-height: 2.2rem;
+			text-transform: capitalize;
+			color: rgba(var(--primary-complement), 1);
+		}
+
+		&__event-date-tag-datetime {
+			padding-left: 0;
+			padding-right: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			& > * {
+				width: 100%;
+				font-family: var(--lato);
+				font-size: 2.2rem;
+				font-weight: 700;
+				line-height: 3.2rem;
+				text-transform: capitalize;
+				color: rgba(var(--primary-color), 1);
+			}
+		}
+
+		&__event-title-link {
+			font-family: var(--playfair);
+			font-size: 2.2rem;
+			font-weight: 700;
+			line-height: 2.8rem;
+			text-transform: capitalize;
+			color: rgba(var(--primary-color), 1);
+
+			&:visited,
+			&:hover,
+			&:focus,
+			&:active {
+				color: rgba(var(--secondary-color), 1);
+			}
+		}
+
+		&__event-featured-image {
+			height: 200px;
+			object-fit: cover;
+			object-position: center center;
+		}
+	}
+
+	.tribe-events-c-nav__list {
+		margin-bottom: 5rem;
+		a,
+		span {
+			font-size: 2rem;
+			font-weight: bold;
+		}
+		.tribe-events-c-nav__next {
+			justify-content: flex-end;
+		}
+		.tribe-events-c-nav__prev {
+			justify-content: flex-start;
+		}
+	}
+
+	.tribe-common-c-btn-border.tribe-events-c-subscribe-dropdown__button,
+	.tribe-events-c-subscribe-dropdown__button-text {
+		background-color: rgba(var(--primary-complement), 1);
+		color: #fff;
+		font-family: var(--playfair);
+		font-size: 2rem;
+	}
+	.tribe-events-c-subscribe-dropdown__content {
+		border: 1px solid rgba(var(--primary-complement), 1);
+	}
+}

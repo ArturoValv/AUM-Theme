@@ -1,0 +1,74 @@
+.cover {
+	max-width: 100vw;
+	width: 100%;
+	min-height: 350px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+		content: "";
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	.bg-image {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 0;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
+		}
+	}
+
+	&__title {
+		z-index: 2;
+		position: relative;
+		text-align: center;
+		color: #fff;
+	}
+
+	@media (min-width: $tablet) {
+		min-height: 450px;
+	}
+
+	@media (min-width: $ldpi) {
+		min-height: 500px;
+	}
+}
+
+@media all and (min-width: 400px) {
+	.cover {
+		padding: 100px 0;
+	}
+}
+
+.home .cover {
+	min-height: 450px;
+
+	@media (min-width: $tablet) {
+		min-height: 500px;
+	}
+
+	@media (min-width: $ldpi) {
+		min-height: 750px;
+	}
+}
+
+@media all and (min-width: 400px) {
+	.cover {
+		padding: 100px 0;
+	}
+}

@@ -1,0 +1,133 @@
+@import "../breakpoints";
+@import "../template-parts/articles";
+
+.blog,
+.archive {
+	.title-wrapper {
+		width: 100%;
+		padding: 2rem;
+		background-color: rgba(var(--tertiary-color), 1);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.title {
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+
+		.articles {
+			padding: 0;
+			&__loop {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+				gap: 3rem;
+
+				.article {
+					width: 100%;
+					flex: 0 0 100%;
+				}
+			}
+		}
+
+		@media (min-width: $tablet) {
+			display: grid;
+			grid-template-columns: 65% 30%;
+			justify-content: space-between;
+			align-content: center;
+			align-items: start;
+			justify-items: center;
+
+			.articles {
+				&__loop {
+					display: grid;
+					grid-template-columns: repeat(2, 46%);
+					justify-content: space-between;
+					align-content: center;
+					align-items: start;
+					justify-items: center;
+
+					.article {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		@media (min-width: $mdpi) {
+			.articles {
+				&__loop {
+					grid-template-columns: repeat(3, 30%);
+				}
+			}
+		}
+	}
+}
+
+.single {
+	.title-wrapper {
+		width: 100%;
+		padding: 2rem;
+		background-color: rgba(var(--tertiary-color), 1);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.title {
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+
+	.article {
+		.ft-image {
+			margin-bottom: 3rem;
+			width: 100%;
+		}
+
+		.post-meta {
+			width: 100%;
+			margin-bottom: 3rem;
+		}
+
+		&__date {
+			font-family: var(--lato);
+			font-weight: 700;
+			font-size: 1.8rem;
+			line-height: 2rem;
+			text-align: center;
+			text-transform: capitalize;
+			color: rgba(var(--primary-color), 1);
+			@media (min-width: $ldpi) {
+				font-size: 2rem;
+				line-height: 2.2rem;
+			}
+		}
+
+		&__author {
+			font-family: var(--lato);
+			font-size: 1.4rem;
+			font-weight: 700;
+			line-height: 1.6rem;
+			text-align: center;
+			text-transform: capitalize;
+			color: rgba(var(--text-color), 1);
+		}
+
+		&__link {
+			font-family: var(--lato);
+			font-size: 1.6rem;
+			line-height: 2rem;
+			text-align: center;
+		}
+	}
+}
